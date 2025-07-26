@@ -1,0 +1,42 @@
+{
+  "extends": ["plugin:prettier/recommended", "next", "next/core-web-vitals", "prettier"],
+  "rules": {
+    "react/jsx-sort-props": [
+      2,
+      {
+        "callbacksLast": true,
+        "shorthandFirst": false,
+        "shorthandLast": true,
+        "ignoreCase": true,
+        "noSortAlphabetically": false
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "typescript": {
+        "extensions": [".js", ".ts", ".tsx"],
+        "project": "./tsconfig.json"
+      },
+      "alias": {
+        "map": [
+          ["@/app", "src/01_app"],
+          ["@/pages", "src/02_pages"],
+          ["@/widgets", "src/03_widgets"],
+          ["@/entities", "src/04_entities"],
+          ["@/shared", "src/04_shared"],
+          ["src", "src"]
+        ]
+      }
+    }
+  }
+}
