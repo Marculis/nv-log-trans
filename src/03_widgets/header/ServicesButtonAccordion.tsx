@@ -1,11 +1,10 @@
-import { services } from '@/shared/lib'
+import { ghPagesUrl, services } from '@/shared/lib'
 import {
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
   AccordionIcon,
-  Box,
   Link,
 } from '@chakra-ui/react'
 
@@ -35,7 +34,7 @@ const ServicesButtonAccordion = () => (
             display='block'
             fontSize='md'
             fontWeight='medium'
-            href={url}
+            href={`${ghPagesUrl}${url}`}
             key={name}
             py={2}
           >
