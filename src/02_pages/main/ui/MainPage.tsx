@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { BlockContainer } from '@/shared/ui'
 import { Box, Card, Flex, Heading, Highlight } from '@chakra-ui/react'
-import { services } from '@/shared/lib'
+import { ghPagesUrl, services } from '@/shared/lib'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Link } from '@chakra-ui/next-js'
@@ -48,7 +48,7 @@ const MainPage: FC<IMainPageProps> = () => (
             shadow='md'
             transition='0.3s'
             w={{ base: '100%', md: '80%' }}
-            onClick={() => window.location.replace(url)}
+            onClick={() => window.location.replace(`${ghPagesUrl}${url}`)}
           >
             <Link
               display='none'

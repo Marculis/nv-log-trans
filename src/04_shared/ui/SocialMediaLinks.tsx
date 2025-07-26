@@ -2,7 +2,7 @@ import { ContainerProps, HStack, ResponsiveValue } from '@chakra-ui/react'
 import Link from 'next/link'
 import { FC } from 'react'
 import { MediaLinkVariantType } from '../types'
-import { socialMediaLinks } from '../lib'
+import { socialMediaLinks, useScreenFormat } from '../lib'
 
 interface ISocialMediaLinksProps extends ContainerProps {
   variant?: MediaLinkVariantType
@@ -18,15 +18,17 @@ const SocialMediaLinks: FC<ISocialMediaLinksProps> = ({
   hoverColor,
   ...props
 }) => {
+  const { isMD } = useScreenFormat()
+
   return (
     <HStack
       gap='2'
       justifyContent='space-between'
       {...props}
     >
-      {socialMediaLinks({ variant, withEmail }).map(({ Icon, href, title }) => (
+      {socialMediaLinks({ variant, withEmail }).map(({ Icon, href, title, mobileHref }) => (
         <Link
-          href={href}
+          href={isMD && mobileHref ? mobileHref : href}
           key={title}
           target='_blank'
         >

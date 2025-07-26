@@ -6,7 +6,7 @@ import {
   ViberIcon,
   ViberIconColor,
 } from '@/shared/ui/icons'
-import { EMAIL, VIBER, TELEGRAM } from '../lib'
+import { EMAIL, VIBER, TELEGRAM, VIBER_MOBILE } from '../lib'
 import { MediaLinkVariantType } from '../types'
 
 interface LinksListInterface {
@@ -25,6 +25,7 @@ const socialMediaLinks = ({ variant, withEmail = true }: LinksListInterface) => 
     {
       title: 'Viber',
       href: VIBER,
+      mobileHref: VIBER_MOBILE,
       Icon: variant === 'color' ? ViberIconColor : ViberIcon,
     },
   ]
