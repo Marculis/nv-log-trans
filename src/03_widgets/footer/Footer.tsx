@@ -1,13 +1,14 @@
 import {
   ADDRESS_URL,
   EMAIL,
+  ghPagesUrl,
   PHONE_NUMBER,
   PHONE_NUMBER_SECOND,
   useScreenFormat,
 } from '@/shared/lib'
-import { BlockContainer, PhoneIcon, SocialMediaLinks } from '@/shared/ui'
+import { BlockContainer, SocialMediaLinks } from '@/shared/ui'
 import { Link } from '@chakra-ui/next-js'
-import { Box, Flex, Heading, HStack, Text, VStack } from '@chakra-ui/react'
+import { Flex, Heading, HStack, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 
 const buttonLinkStyle = {
@@ -37,14 +38,13 @@ const Footer = () => {
           alignItems='center'
           gap='4'
           w='fit-content'
-          // w={{ base: '100%', md: '35%' }}
         >
           <Image
             alt={'alt'}
             height='60'
             loading='eager'
             priority={true}
-            src='/icons/logo-nv.png'
+            src={`${ghPagesUrl}/icons/logo-nv.png`}
             width='60'
           />
           <Heading

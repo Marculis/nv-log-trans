@@ -1,4 +1,4 @@
-import { EMAIL, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
+import { EMAIL, ghPagesUrl, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
 import { BlockContainer, SocialMediaLinks } from '@/shared/ui'
 import { Link } from '@chakra-ui/next-js'
 import { Flex, Button } from '@chakra-ui/react'
@@ -105,7 +105,7 @@ const Header = () => {
             loading='eager'
             objectFit='contain'
             priority={true}
-            src='/icons/logo-nv.png'
+            src={`${ghPagesUrl}/icons/logo-nv.png`}
             fill
           />
         </Link>

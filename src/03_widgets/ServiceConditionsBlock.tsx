@@ -1,3 +1,4 @@
+import { ghPagesUrl } from '@/shared/lib'
 import { BlockContainer, DoneIcon } from '@/shared/ui'
 import { Box, Flex, Heading, List, ListItem, Text } from '@chakra-ui/react'
 import Image from 'next/image'
@@ -7,7 +8,7 @@ const ServiceConditionsBlock: FC<{
   servicePoints: string[]
   heading: string
   imageSrc?: string
-}> = ({ heading, servicePoints, imageSrc = '/images/epi-services.jpg' }) => {
+}> = ({ heading, servicePoints, imageSrc = `${ghPagesUrl}/images/epi-services.jpg` }) => {
   return (
     <BlockContainer
       alignItems='center'

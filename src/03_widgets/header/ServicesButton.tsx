@@ -18,10 +18,8 @@ const ServicesButton: FC<{ linkStyles?: any }> = ({ linkStyles }) => {
         Наши услуги
       </Link>
       <Menu
-        autoSelect={false}
         gutter={0}
         isOpen={isOpen}
-        matchWidth
       >
         <MenuButton
           _hover={{
