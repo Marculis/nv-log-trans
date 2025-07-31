@@ -1,8 +1,8 @@
 import { COMPANY } from '@/shared/lib'
 import axios from 'axios'
 
-const TOKEN = '7464259020:AAEWYtAWG0rqWL7eTd8AG2LEppvb6zy-KTk'
-const CHAT_ID = '-1002661290336'
+const TOKEN = 'token'
+const CHAT_ID = 'CHAT_ID'
 
 const API_URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`
 
