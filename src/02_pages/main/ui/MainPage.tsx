@@ -20,6 +20,8 @@ const MainPage: FC<IMainPageProps> = () => {
   const baseUrl4 = process.env.NEXT_PUBLIC_BASE_URL_4
   const baseUrl5 = process.env.NEXT_PUBLIC_BASE_URL_5
   const baseUrl6 = process.env.NEXT_PUBLIC_BASE_URL_6
+  const baseUrl7 = process.env.NEXT_PUBLIC_BASE_URL_7
+  const baseUrl8 = process.env.NEXT_PUBLIC_BASE_URL_8
 
   console.log(baseUrl, 'BASE_URL')
   console.log(baseUrl2, 'BASE_URL2')
@@ -27,6 +29,8 @@ const MainPage: FC<IMainPageProps> = () => {
   console.log(baseUrl4, 'BASE_URL4')
   console.log(baseUrl5, 'BASE_URL5')
   console.log(baseUrl6, 'BASE_URL6')
+  console.log(baseUrl7, 'BASE_URL7')
+  console.log(baseUrl8, 'BASE_URL8')
 
   return (
     <>

@@ -97,6 +97,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    env:
+      NEXT_PUBLIC_BASE_URL_7: ${{ vars.NEXT_PUBLIC_BASE_URL_7 }}
+      NEXT_PUBLIC_BASE_URL_8: ${{ secrets.NEXT_PUBLIC_BASE_URL_8 }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
