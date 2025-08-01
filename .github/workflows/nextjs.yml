@@ -85,10 +85,10 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      env:
-        NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
-        NEXT_PUBLIC_BASE_URL2: ${{ secrets.NEXT_PUBLIC_BASE_URL2 }}
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
+      NEXT_PUBLIC_BASE_URL2: ${{ secrets.NEXT_PUBLIC_BASE_URL2 }}
     needs: build
     steps:
       - name: Deploy to GitHub Pages
