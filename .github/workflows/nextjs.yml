@@ -26,14 +26,14 @@ concurrency:
 
 env:
   NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL }}
-  NEXT_PUBLIC_BASE_URL_2: ${{ secret.NEXT_PUBLIC_BASE_URL_2 }}
+  NEXT_PUBLIC_BASE_URL_2: ${{ secrets.NEXT_PUBLIC_BASE_URL_2 }}
 
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_URL_3: ${{ secret.NEXT_PUBLIC_BASE_URL_3 }}
+      NEXT_PUBLIC_BASE_URL_3: ${{ secrets.NEXT_PUBLIC_BASE_URL_3 }}
       NEXT_PUBLIC_BASE_URL_4: ${{ vars.NEXT_PUBLIC_BASE_URL_4 }}
     steps:
       - name: Checkout
@@ -83,7 +83,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          NEXT_PUBLIC_BASE_URL_5: ${{ secret.NEXT_PUBLIC_BASE_URL_5 }}
+          NEXT_PUBLIC_BASE_URL_5: ${{ secrets.NEXT_PUBLIC_BASE_URL_5 }}
           NEXT_PUBLIC_BASE_URL_6: ${{ vars.NEXT_PUBLIC_BASE_URL_6 }}
           BASE_URL_7: ${{ vars.BASE_URL_7 }}
           BASE_URL_8: ${{ secrets.BASE_URL_8 }}
