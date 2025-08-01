@@ -26,15 +26,15 @@ concurrency:
 
 env:
   NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
-  NEXT_PUBLIC_BASE_URL2: ${{ vars.NEXT_PUBLIC_BASE_URL_2 }}
+  NEXT_PUBLIC_BASE_URL_2: ${{ vars.NEXT_PUBLIC_BASE_URL_2 }}
 
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
     env:
-      NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL_3 }}
-      NEXT_PUBLIC_BASE_URL2: ${{ secrets.NEXT_PUBLIC_BASE_URL_4 }}
+      NEXT_PUBLIC_BASE_URL_3: ${{ vars.NEXT_PUBLIC_BASE_URL_3 }}
+      NEXT_PUBLIC_BASE_URL_4: ${{ secrets.NEXT_PUBLIC_BASE_URL_4 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -83,8 +83,8 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          NEXT_PUBLIC_BASE_URL: ${{ vars.NEXT_PUBLIC_BASE_URL_5 }}
-          NEXT_PUBLIC_BASE_URL2: ${{ secrets.NEXT_PUBLIC_BASE_URL_6 }}
+          NEXT_PUBLIC_BASE_URL_5: ${{ vars.NEXT_PUBLIC_BASE_URL_5 }}
+          NEXT_PUBLIC_BASE_URL_6: ${{ secrets.NEXT_PUBLIC_BASE_URL_6 }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
