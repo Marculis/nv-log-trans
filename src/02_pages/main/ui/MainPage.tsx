@@ -15,7 +15,9 @@ const MAIN_HEADING_TEXT = `Таможенное оформление, логис
 
 const MainPage: FC<IMainPageProps> = () => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
+  const baseUrl2 = process.env.NEXT_PUBLIC_BASE_URL2
   console.log(baseUrl, 'BASE_URL')
+  console.log(baseUrl2, 'BASE_URL2')
 
   return (
     <>
