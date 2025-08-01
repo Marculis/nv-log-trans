@@ -28,6 +28,9 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
+      NEXT_PUBLIC_BASE_URL2: ${{ secrets.NEXT_PUBLIC_BASE_URL2 }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -86,9 +89,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
-      NEXT_PUBLIC_BASE_URL2: ${{ secrets.NEXT_PUBLIC_BASE_URL2 }}
     needs: build
     steps:
       - name: Deploy to GitHub Pages
