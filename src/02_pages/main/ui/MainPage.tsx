@@ -15,9 +15,18 @@ const MAIN_HEADING_TEXT = `Таможенное оформление, логис
 
 const MainPage: FC<IMainPageProps> = () => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-  const baseUrl2 = process.env.NEXT_PUBLIC_BASE_URL2
+  const baseUrl2 = process.env.NEXT_PUBLIC_BASE_URL_2
+  const baseUrl3 = process.env.NEXT_PUBLIC_BASE_URL_3
+  const baseUrl4 = process.env.NEXT_PUBLIC_BASE_URL_4
+  const baseUrl5 = process.env.NEXT_PUBLIC_BASE_URL_5
+  const baseUrl6 = process.env.NEXT_PUBLIC_BASE_URL_6
+
   console.log(baseUrl, 'BASE_URL')
   console.log(baseUrl2, 'BASE_URL2')
+  console.log(baseUrl3, 'BASE_URL3')
+  console.log(baseUrl4, 'BASE_URL4')
+  console.log(baseUrl5, 'BASE_URL5')
+  console.log(baseUrl6, 'BASE_URL6')
 
   return (
     <>
