@@ -31,6 +31,7 @@ const MainPage: FC<IMainPageProps> = () => {
   console.log(baseUrl6, 'BASE_URL6')
   console.log(baseUrl7, 'BASE_URL7')
   console.log(baseUrl8, 'BASE_URL8')
+  console.log(process.env.NEXT_PUBLIC_URL_BASE, 'NEXT_PUBLIC_URL_BASE')
 
   return (
     <>
