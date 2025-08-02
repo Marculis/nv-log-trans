@@ -5,7 +5,7 @@ import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
 import { benefits, importantPoints, servicePoints } from './lib/constants'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { ghPagesUrl } from '@/shared/lib'
+import { baseUrl } from '@/shared/lib'
 
 const PiServicePage = () => {
   return (
@@ -14,7 +14,7 @@ const PiServicePage = () => {
         description='Мы предоставляем услуги ПИ в соответствии с требованиями Федеральной таможенной службы РФ, включая оформление таможенной гарантии'
         heading={`Предварительное информирование (ПИ)`}
         headingHighlight={['(ПИ)']}
-        imageSrc={`${ghPagesUrl}/images/epi-bg.jpg`}
+        imageSrc={`${baseUrl}/images/epi-bg.jpg`}
       />
 
       <BlockContainer>

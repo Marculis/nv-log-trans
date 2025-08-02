@@ -1,4 +1,4 @@
-import { ghPagesUrl, services } from '@/shared/lib'
+import { baseUrl, services } from '@/shared/lib'
 import {
   Accordion,
   AccordionItem,
@@ -34,7 +34,7 @@ const ServicesButtonAccordion = () => (
             display='block'
             fontSize='md'
             fontWeight='medium'
-            href={`${ghPagesUrl}${url}`}
+            href={`${baseUrl}${url}`}
             key={name}
             py={2}
           >

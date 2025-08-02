@@ -1,4 +1,4 @@
-import { ghPagesUrl } from '@/shared/lib'
+import { baseUrl } from '@/shared/lib'
 import { BlockContainer } from '@/shared/ui'
 import { Box } from '@chakra-ui/react'
 import Image from 'next/image'
@@ -6,7 +6,7 @@ import { FC, ReactNode } from 'react'
 
 const FullScreenImage: FC<{ children?: ReactNode; imageSrc?: string }> = ({
   children,
-  imageSrc = `${ghPagesUrl}/images/main-bg2.jpg`,
+  imageSrc = `${baseUrl}/images/main-bg2.jpg`,
 }) => {
   return (
     <BlockContainer

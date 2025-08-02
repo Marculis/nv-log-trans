@@ -1,4 +1,4 @@
-import { ghPagesUrl, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
+import { baseUrl, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
 import { BlockContainer, PhoneIcon, SocialMediaLinks } from '@/shared/ui'
 import { HamburgerIcon, PhoneIcon as PhoneIconChakra } from '@chakra-ui/icons'
 import { Link } from '@chakra-ui/next-js'
@@ -36,7 +36,7 @@ const HeaderMobile = () => {
           loading='eager'
           objectFit='contain'
           priority={true}
-          src={`${ghPagesUrl}/icons/logo-nv.png`}
+          src={`${baseUrl}/icons/logo-nv.png`}
           fill
         />
       </Link>

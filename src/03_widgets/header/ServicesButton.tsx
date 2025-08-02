@@ -1,4 +1,4 @@
-import { ghPagesUrl, services } from '@/shared/lib'
+import { baseUrl, services } from '@/shared/lib'
 import { ChevronDownIcon } from '@chakra-ui/icons'
 import { Link } from '@chakra-ui/next-js'
 import { Button, Flex, Menu, MenuButton, MenuItem, MenuList, useDisclosure } from '@chakra-ui/react'
@@ -47,7 +47,7 @@ const ServicesButton: FC<{ linkStyles?: any }> = ({ linkStyles }) => {
               as={Link}
               fontSize='lg'
               fontWeight='medium'
-              href={`${ghPagesUrl}${url}`}
+              href={`${baseUrl}${url}`}
               key={name}
             >
               {name}

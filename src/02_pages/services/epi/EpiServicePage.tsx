@@ -5,7 +5,7 @@ import { benefits, importantPoints, servicePoints } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { ghPagesUrl } from '@/shared/lib'
+import { baseUrl } from '@/shared/lib'
 
 const EpiServicePage = () => {
   return (
@@ -15,7 +15,7 @@ const EpiServicePage = () => {
           импортеров и экспортеров, работающих на территории Беларуси, России и Европы'
         heading={`Электронное предварительное информирование (ЭПИ)`}
         headingHighlight={['(ЭПИ)']}
-        imageSrc={`${ghPagesUrl}/images/epi-bg.jpg`}
+        imageSrc={`${baseUrl}/images/epi-bg.jpg`}
       />
 
       <BlockContainer>

@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { BlockContainer } from '@/shared/ui'
 import { Box, Card, Flex, Heading, Highlight } from '@chakra-ui/react'
-import { ghPagesUrl, services } from '@/shared/lib'
+import { baseUrl, services } from '@/shared/lib'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Link } from '@chakra-ui/next-js'
@@ -14,10 +14,7 @@ interface IMainPageProps {
 const MAIN_HEADING_TEXT = `Таможенное оформление, логистика РБ, РФ, Европа`
 
 const MainPage: FC<IMainPageProps> = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL
-
   console.log(baseUrl, 'NEXT_PUBLIC_BASE_URL')
-  console.log(process.env.NEXT_PUBLIC_URL_BASE, 'NEXT_PUBLIC_URL_BASE')
 
   return (
     <>
@@ -54,7 +51,7 @@ const MainPage: FC<IMainPageProps> = () => {
               shadow='md'
               transition='0.3s'
               w={{ base: '100%', md: '80%' }}
-              onClick={() => window.location.replace(`${ghPagesUrl}${url}`)}
+              onClick={() => window.location.replace(`${baseUrl}${url}`)}
             >
               <Link
                 display='none'

@@ -1,7 +1,7 @@
 import {
   ADDRESS_URL,
   EMAIL,
-  ghPagesUrl,
+  baseUrl,
   PHONE_NUMBER,
   PHONE_NUMBER_SECOND,
   useScreenFormat,
@@ -44,7 +44,7 @@ const Footer = () => {
             height='60'
             loading='eager'
             priority={true}
-            src={`${ghPagesUrl}/icons/logo-nv.png`}
+            src={`${baseUrl}/icons/logo-nv.png`}
             width='60'
           />
           <Heading
