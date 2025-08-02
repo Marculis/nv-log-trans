@@ -46,6 +46,7 @@ const EpiServicePage = () => {
         heading='Почему ЭПИ важно?'
         importantPoints={importantPoints}
       />
+
       <ContactsBlock>
         <Heading
           fontWeight='semibold'
@@ -56,7 +57,7 @@ const EpiServicePage = () => {
           display='flex'
           flexDir='column'
           gap='2'
-          mt='6'
+          mt='2'
         >
           {benefits.map(({ text, Icon }) => (
             <ListItem

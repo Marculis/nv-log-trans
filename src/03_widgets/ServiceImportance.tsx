@@ -10,7 +10,8 @@ interface ImportantPoints {
 const ServiceImportance: FC<{
   heading: string
   importantPoints: ImportantPoints[]
-}> = ({ heading, importantPoints }) => (
+  itemTextWidth?: string
+}> = ({ heading, importantPoints, itemTextWidth = '240px' }) => (
   <BlockContainer bgColor='primary.dark'>
     <Heading
       color='gray.100'
@@ -21,7 +22,7 @@ const ServiceImportance: FC<{
 
     <Flex
       flexWrap='wrap'
-      gap='4'
+      gap={{ base: 8, md: 4 }}
       justifyContent='space-around'
     >
       {importantPoints.map(({ text, Icon }) => (
@@ -29,7 +30,7 @@ const ServiceImportance: FC<{
           alignItems='center'
           flexDir='column'
           flexWrap='wrap'
-          gap='4'
+          gap={{ base: 1, md: 4 }}
           key={text}
         >
           <Icon
@@ -40,7 +41,7 @@ const ServiceImportance: FC<{
             color='gray.100'
             fontSize='lg'
             fontWeight='medium'
-            maxW='240px'
+            maxW={itemTextWidth}
             textAlign='center'
           >
             {text}

@@ -67,7 +67,10 @@ const ContactsBlock: FC<{ children?: ReactNode; childrenUp?: boolean }> = ({
                 mr='2'
                 transition='0.3s'
               />
-              <Text>{`${PHONE_NUMBER} (консультация)`}</Text>
+              <Text
+                _groupHover={{ color: 'text.muted' }}
+                transition='0.3s'
+              >{`${PHONE_NUMBER} (консультация)`}</Text>
             </Link>
           </HStack>
 
@@ -84,7 +87,10 @@ const ContactsBlock: FC<{ children?: ReactNode; childrenUp?: boolean }> = ({
               mr='2'
               transition='0.3s'
             />
-            <Text>{`${PHONE_NUMBER_SECOND} (заключение договоров)`}</Text>
+            <Text
+              _groupHover={{ color: 'text.muted' }}
+              transition='0.3s'
+            >{`${PHONE_NUMBER_SECOND} (заключение договоров)`}</Text>
           </Link>
 
           <Link

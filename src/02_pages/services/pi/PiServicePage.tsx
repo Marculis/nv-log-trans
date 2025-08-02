@@ -54,7 +54,7 @@ const PiServicePage = () => {
           display='flex'
           flexDir='column'
           gap='2'
-          mt='6'
+          mt='2'
         >
           {benefits.map(({ text, Icon }) => (
             <ListItem
@@ -67,7 +67,7 @@ const PiServicePage = () => {
               <Icon
                 boxSize='6'
                 color='primary.base'
-              />{' '}
+              />
               {text}
             </ListItem>
           ))}

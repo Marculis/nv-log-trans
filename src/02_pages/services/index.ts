@@ -1,2 +1,7 @@
 export { default as EpiServicePage } from './epi/EpiServicePage'
 export { default as PiServicePage } from './pi/PiServicePage'
+export { default as Import70ServicePage } from './import70/Import70ServicePage'
+export { default as SuretyServicePage } from './surety/SuretyServicePage'
+export { default as TransitDeclarationsPage } from './transitDeclarations/TransitDeclarationsPage'
+export { default as FitoDeclarationsPage } from './fitoDeclarations/FitoDeclarationsPage'
+export { default as VetDeclarationsPage } from './vetDeclarations/VetDeclarationsPage'

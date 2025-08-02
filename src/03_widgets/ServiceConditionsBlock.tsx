@@ -5,15 +5,21 @@ import Image from 'next/image'
 import { FC } from 'react'
 
 const ServiceConditionsBlock: FC<{
-  servicePoints: string[]
+  servicePoints: string[] | { title: string; description: string }[]
   heading: string
   imageSrc?: string
-}> = ({ heading, servicePoints, imageSrc = `${baseUrl}/images/epi-services.jpg` }) => {
+  isImageOnRight?: boolean
+}> = ({
+  heading,
+  servicePoints,
+  imageSrc = `${baseUrl}/images/epi-services.jpg`,
+  isImageOnRight = true,
+}) => {
   return (
     <BlockContainer
       alignItems='center'
       bgColor='bg.light'
-      flexDir={{ base: 'column', md: 'row' }}
+      flexDir={{ base: 'column', md: isImageOnRight ? 'row' : 'row-reverse' }}
       justifyContent='space-between'
     >
       <Flex
@@ -32,29 +38,33 @@ const ServiceConditionsBlock: FC<{
           gap='4'
           maxW='700px'
         >
-          {servicePoints.map((item) => (
+          {servicePoints.map((item, index) => (
             <ListItem
               alignItems='center'
               display='flex'
               gap='4'
-              key={item}
+              key={index}
             >
               <DoneIcon
                 boxSize='6'
                 color='secondary.base'
               />
-              <Text
-                fontSize='xl'
-                fontWeight='medium'
-              >
-                {item}
-              </Text>
+              <Flex flexDir='column'>
+                <Text
+                  fontSize='xl'
+                  fontWeight='medium'
+                >
+                  {typeof item === 'string' ? item : item.title}
+                </Text>
+                {typeof item === 'object' && <Text>{item.description}</Text>}
+              </Flex>
             </ListItem>
           ))}
         </List>
       </Flex>
       <Box
         borderRadius='xl'
+        maxW='500px'
         overflow='hidden'
       >
         <Image
