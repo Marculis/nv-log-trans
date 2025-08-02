@@ -41,15 +41,18 @@ const Import70ServicePage = () => {
           </Highlight>
         </Text>
       </BlockContainer>
+
       <ServiceConditionsBlock
         heading='Преимущества услуги «Импорт 70»'
         imageSrc={`${baseUrl}/images/import-70-2.jpg`}
         servicePoints={servicePoints}
       />
+
       <ServiceImportance
         heading='Почему с нами удобно работать?'
         importantPoints={importantPoints}
       />
+
       <ContactsBlock>
         <Heading
           fontWeight='semibold'

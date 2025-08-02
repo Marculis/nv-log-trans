@@ -47,13 +47,13 @@ const Header = () => {
           alignItems='center'
           gap='8'
         >
-          <Link
+          {/* <Link
             as={Link}
             href={`mailto:${EMAIL}`}
             {...phoneButtonStyles}
           >
             {EMAIL}
-          </Link>
+          </Link> */}
 
           <Link
             as={Link}
