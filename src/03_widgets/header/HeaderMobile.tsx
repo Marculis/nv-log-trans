@@ -46,7 +46,7 @@ const HeaderMobile = () => {
           loading='eager'
           objectFit='contain'
           priority={true}
-          src={`${baseUrl}/icons/logo-nv.png`}
+          src={`${baseUrl}/icons/logo-16.svg`}
           fill
         />
       </Link>

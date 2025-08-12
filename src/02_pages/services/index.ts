@@ -7,3 +7,5 @@ export { default as FitoDeclarationsPage } from './fitoDeclarations/FitoDeclarat
 export { default as VetDeclarationsPage } from './vetDeclarations/VetDeclarationsPage'
 export { default as CustomDeclarationsPage } from './customDeclarations/CustomDeclarationsPage'
 export { default as StatisticDeclarationPage } from './statisticDeclaration/StatisticDeclarationPage'
+export { default as ServicesPage } from './services/ServicesPage'
+export { default as ImportExportReexportPage } from './importExportReexport/ImportExportReexportPage'

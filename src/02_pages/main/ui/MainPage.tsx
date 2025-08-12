@@ -5,6 +5,7 @@ import { baseUrl, services } from '@/shared/lib'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Link } from '@chakra-ui/next-js'
+import AllServicesBlock from '@/widgets/AllServicesBlock'
 
 interface IMainPageProps {
   images: { src: string; alt: string }[]
@@ -22,80 +23,18 @@ const MainPage: FC<IMainPageProps> = () => {
         headingHighlight={['РБ, РФ, Европа']}
       />
 
-      <BlockContainer id='services'>
+      <AllServicesBlock>
         <Heading
           color='gray.600'
+          mb='8'
+          mt='20'
           size='2xl'
           textAlign='center'
         >
           Предоставляемые услуги
         </Heading>
-        <Flex
-          alignItems='center'
-          flexDir='column'
-          gap='8'
-        >
-          {services.map(({ description, highlight, Icon, url }) => (
-            <Card
-              _hover={{ shadow: 'lg', bg: 'bg.light' }}
-              alignItems='center'
-              borderRadius='xl'
-              cursor='pointer'
-              flexDir='row'
-              gap='6'
-              key={description}
-              p='4'
-              role='group'
-              shadow='md'
-              transition='0.3s'
-              w={{ base: '100%', md: '80%' }}
-              onClick={() => window.location.replace(`${baseUrl}${url}`)}
-            >
-              <Link
-                display='none'
-                href={url}
-              ></Link>
-              <Box
-                _groupHover={{ borderColor: 'primary.base' }}
-                alignSelf='center'
-                border='2px solid'
-                borderColor='primary.light'
-                borderRadius='full'
-                p='3'
-                transition='0.3s'
-                w='fit-content'
-              >
-                <Icon
-                  _groupHover={{ color: 'secondary.base' }}
-                  boxSize={{ base: 8, md: 10 }}
-                  color='secondary.200'
-                  transition='0.3s'
-                />
-              </Box>
-              <Heading
-                _groupHover={{ color: 'secondary.medium' }}
-                color='gray.600'
-                fontSize={{ base: 'lg', md: 'xl' }}
-                fontWeight='semibold'
-                lineHeight='normal'
-                transition='0.3s'
-                whiteSpace='pre-wrap'
-              >
-                <Highlight
-                  query={highlight}
-                  styles={{
-                    color: 'primary.base',
-                    fontWeight: 'bold',
-                    whiteSpace: 'pre-wrap',
-                  }}
-                >
-                  {description}
-                </Highlight>
-              </Heading>
-            </Card>
-          ))}
-        </Flex>
-      </BlockContainer>
+      </AllServicesBlock>
+
       <ContactsBlock childrenUp={false}>
         <Box
           borderRadius='xl'

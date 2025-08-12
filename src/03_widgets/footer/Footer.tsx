@@ -44,7 +44,7 @@ const Footer = () => {
             height='60'
             loading='eager'
             priority={true}
-            src={`${baseUrl}/icons/logo-nv.png`}
+            src={`${baseUrl}/icons/logo-16.svg`}
             width='60'
           />
           <Heading

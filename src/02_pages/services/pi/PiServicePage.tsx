@@ -14,7 +14,7 @@ const PiServicePage = () => {
         description='Мы предоставляем услуги ПИ в соответствии с требованиями Федеральной таможенной службы РФ, включая оформление таможенной гарантии'
         heading={`Предварительное информирование (ПИ)`}
         headingHighlight={['(ПИ)']}
-        imageSrc={`${baseUrl}/images/epi-bg.jpg`}
+        imageSrc={`${baseUrl}/images/pi-bg.jpg`}
       />
 
       <BlockContainer>

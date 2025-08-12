@@ -31,7 +31,7 @@ const FullScreenImage: FC<{ children?: ReactNode; imageSrc?: string }> = ({
             style={{
               objectFit: 'cover',
               objectPosition: 'center',
-              filter: 'brightness(60%)',
+              filter: 'brightness(50%)',
             }}
             fill
           />
