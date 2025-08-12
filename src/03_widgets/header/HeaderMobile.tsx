@@ -2,20 +2,30 @@ import { baseUrl, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
 import { BlockContainer, PhoneIcon, SocialMediaLinks } from '@/shared/ui'
 import { HamburgerIcon, PhoneIcon as PhoneIconChakra } from '@chakra-ui/icons'
 import { Link } from '@chakra-ui/next-js'
-import { Flex, IconButton, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
+import {
+  Flex,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  useDisclosure,
+} from '@chakra-ui/react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import ServicesButtonAccordion from './ServicesButtonAccordion'
+import { CurrencyWidget } from '../CurrencyWidget'
 
 const HeaderMobile = () => {
   const { pathname } = useRouter()
   const isMain = pathname === '/'
+  const { isOpen, onClose, onOpen } = useDisclosure()
 
   return (
     <BlockContainer
       alignItems='center'
       as='header'
-      bgColor='bg.medium'
+      bgColor='bg.light'
       flexDir='row'
       gap='0'
       h={14}
@@ -48,9 +58,11 @@ const HeaderMobile = () => {
           <PhoneIconChakra color='secondary.base' />
         </Link>
         <Menu
-          autoSelect={false}
           gutter={4}
           isLazy={true}
+          isOpen={isOpen}
+          onClose={onClose}
+          onOpen={onOpen}
         >
           <MenuButton
             aria-label='Options'
@@ -80,9 +92,9 @@ const HeaderMobile = () => {
             >
               О компании
             </MenuItem>
-            <MenuItem closeOnSelect={false}>
-              <ServicesButtonAccordion />
-            </MenuItem>
+
+            <ServicesButtonAccordion onClose={onClose} />
+
             <MenuItem
               as={Link}
               href={`#contacts`}
@@ -93,6 +105,7 @@ const HeaderMobile = () => {
             <MenuItem
               as={Link}
               href={`tel:${PHONE_NUMBER}`}
+              lineHeight='1rem'
               mt='12'
             >
               <PhoneIcon
@@ -106,6 +119,8 @@ const HeaderMobile = () => {
             <MenuItem
               as={Link}
               href={`tel:${PHONE_NUMBER_SECOND}`}
+              lineHeight='1rem'
+              mt='2'
             >
               <PhoneIcon
                 boxSize='8'
@@ -114,7 +129,12 @@ const HeaderMobile = () => {
               />
               {`${PHONE_NUMBER_SECOND} - заключение договоров`}
             </MenuItem>
-
+            <MenuItem closeOnSelect={false}>
+              <CurrencyWidget
+                maxW='100%'
+                my='2'
+              />
+            </MenuItem>
             <MenuItem
               bgColor='primary.dark'
               h='12'

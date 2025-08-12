@@ -5,19 +5,21 @@ import { Flex, Button } from '@chakra-ui/react'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import ServicesButton from './ServicesButton'
+import { CurrencyWidget } from '../CurrencyWidget'
 
 const phoneButtonStyles = {
   _hover: { bg: 'none', color: 'secondary.medium' },
   color: 'gray.100',
   justifyContent: 'center',
   size: { base: 'sm', lg: 'md' },
+  lineHeight: '1rem',
   fontWeight: 'medium',
 }
 
 const pagesLinksStyles = {
   _hover: { color: 'primary.base' },
   color: 'primary.dark',
-  fontSize: '1.5rem',
+  fontSize: { base: 'lg', lg: '1.5rem' },
   fontWeight: 'semibold',
 }
 
@@ -43,6 +45,7 @@ const Header = () => {
         >
           RU^
         </Button>
+
         <Flex
           alignItems='center'
           gap='8'
@@ -109,7 +112,12 @@ const Header = () => {
             fill
           />
         </Link>
-        <Flex gap='8'>
+
+        <Flex
+          alignItems='center'
+          gap={{ base: 4, lg: 8 }}
+        >
+          <CurrencyWidget />
           <Link
             {...pagesLinksStyles}
             href='about'

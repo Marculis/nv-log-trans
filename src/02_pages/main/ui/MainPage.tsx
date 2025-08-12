@@ -14,8 +14,6 @@ interface IMainPageProps {
 const MAIN_HEADING_TEXT = `Таможенное оформление, логистика РБ, РФ, Европа`
 
 const MainPage: FC<IMainPageProps> = () => {
-  console.log(baseUrl, 'NEXT_PUBLIC_BASE_URL')
-
   return (
     <>
       <ServiceMainBlock

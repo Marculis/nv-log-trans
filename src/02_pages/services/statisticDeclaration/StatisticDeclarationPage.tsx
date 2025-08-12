@@ -26,7 +26,7 @@ const StatisticDeclarationPage = () => {
         >
           <Highlight
             query={['Статистическое декларирование товаров']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base' }}
+            styles={{ fontWeight: 'semibold', whiteSpace: 'pre-wrap', color: 'primary.base' }}
           >
             {`Статистическое декларирование товаров — это подача сведений о внешнеторговых операциях, при которых не совершаются таможенные процедуры, но требуется учет объемов и номенклатуры экспорта и импорта. Оно применяется при торговле между странами ЕАЭС`}
           </Highlight>

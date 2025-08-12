@@ -13,13 +13,17 @@ const ServiceMainBlock: FC<{
       <Heading
         alignSelf='start'
         color='gray.100'
-        fontSize={{ base: '3rem', md: '4.2rem' }}
+        fontSize={{ base: '2.5rem', md: '4.2rem' }}
         w='90%'
         whiteSpace='pre-wrap'
       >
         <Highlight
           query={headingHighlight}
-          styles={{ color: 'primary.base', fontSize: { base: '2.5rem', md: '4rem' } }}
+          styles={{
+            color: 'primary.base',
+            whiteSpace: 'pre-wrap',
+            fontSize: { base: '2.5rem', md: '4rem' },
+          }}
         >
           {heading}
         </Highlight>
