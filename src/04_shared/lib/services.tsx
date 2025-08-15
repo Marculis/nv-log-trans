@@ -7,6 +7,7 @@ import {
   HorseIcon,
   LeafIcon,
   SheetIcon,
+  TimeInIcon,
   TruckIcon,
   WarehouseIcon,
 } from '@/shared/ui'
@@ -93,7 +94,7 @@ const services = [
     name: 'Временный ввоз',
     description: 'Временный ввоз',
     highlight: ['Временный ввоз'],
-    Icon: HandshakeIcon,
+    Icon: TimeInIcon,
     image: `${baseUrl}/images/skyline.jpg`,
   },
   {
