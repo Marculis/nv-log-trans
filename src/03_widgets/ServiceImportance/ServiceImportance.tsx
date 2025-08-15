@@ -1,6 +1,7 @@
 import { BlockContainer } from '@/shared/ui'
 import { Flex, Heading, IconProps, Text } from '@chakra-ui/react'
 import { FC } from 'react'
+import { defaultImportantPoints } from './constants'
 
 interface ImportantPoints {
   text: string
@@ -8,10 +9,14 @@ interface ImportantPoints {
 }
 
 const ServiceImportance: FC<{
-  heading: string
-  importantPoints: ImportantPoints[]
+  heading?: string
+  importantPoints?: ImportantPoints[]
   itemTextWidth?: string
-}> = ({ heading, importantPoints, itemTextWidth = '240px' }) => (
+}> = ({
+  heading = 'Почему с нами удобно работать?',
+  importantPoints = defaultImportantPoints,
+  itemTextWidth = '240px',
+}) => (
   <BlockContainer bgColor='primary.dark'>
     <Heading
       color='gray.100'

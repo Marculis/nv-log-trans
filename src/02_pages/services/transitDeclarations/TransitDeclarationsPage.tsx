@@ -1,16 +1,16 @@
 import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon } from '@/shared/ui'
+import { DoneIcon, WhatIsBlock } from '@/shared/ui'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Box, Flex, Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
+import { Box, Flex, Heading, List, ListItem } from '@chakra-ui/react'
 import {
   aboutService,
-  importantPoints,
   requiredDocuments,
   servicesConditions,
+  whatIsBlockTexts,
 } from './lib/constants'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
-import ServiceImportance from '@/widgets/ServiceImportance'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const TransitDeclarationsPage = () => {
   return (
@@ -22,21 +22,7 @@ const TransitDeclarationsPage = () => {
         imageSrc={`${baseUrl}/images/transit.jpg`}
       />
 
-      <BlockContainer>
-        <Heading>Что такое транзитные декларации?</Heading>
-
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={['Транзитные декларации']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base', whiteSpace: 'pre-wrap' }}
-          >
-            {`Транзитные декларации — это документы, используемые для оформления перемещения товаров через границы стран без уплаты пошлин и налогов в промежуточных точках. Они позволяют контролировать груз до его прибытия в конечную страну назначения.`}
-          </Highlight>
-        </Text>
-
+      <WhatIsBlock {...whatIsBlockTexts}>
         <Flex
           flexDir='column'
           gap='12'
@@ -81,7 +67,7 @@ const TransitDeclarationsPage = () => {
             </Flex>
           ))}
         </Flex>
-      </BlockContainer>
+      </WhatIsBlock>
 
       <ServiceConditionsBlock
         heading='Необходимые документы для оформления транзитной декларации'
@@ -90,11 +76,7 @@ const TransitDeclarationsPage = () => {
         servicePoints={requiredDocuments}
       />
 
-      <ServiceImportance
-        heading='Почему с нами удобно работать?'
-        importantPoints={importantPoints}
-        itemTextWidth='340px'
-      />
+      <ServiceImportance itemTextWidth='340px' />
 
       <ContactsBlock>
         <Heading

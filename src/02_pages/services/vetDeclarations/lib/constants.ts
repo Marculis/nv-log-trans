@@ -1,5 +1,3 @@
-import { LawWriteIcon, MapsPinIcon, OkayIcon, RocketIcon } from '@/shared/ui'
-
 export const requiredDocuments = [
   'Международный ветеринарный сертификат (выдается в стране происхождения)',
   'Документ на перевозку груза (CMR)',
@@ -9,28 +7,17 @@ export const requiredDocuments = [
   'Экспортная декларация (если имеется)',
 ]
 
-export const importantPoints = [
-  {
-    Icon: MapsPinIcon,
-    text: 'Работаем по всей территории РБ, РФ, ЕС и ЕАЭС',
-  },
-  {
-    Icon: OkayIcon,
-    text: 'Опыт работы более 10 лет',
-  },
-  {
-    Icon: LawWriteIcon,
-    text: 'Учитываем нюансы законодательства и специфики грузов',
-  },
-  {
-    Icon: RocketIcon,
-    text: 'Быстрое оформление необходимых документов',
-  },
-]
-
 export const servicesConditions = [
   'Работаем с любыми типами продукции',
   'Сопровождение до завершения контроля',
   'Оформление в кратчайшие сроки',
   'Регистрация в системе TRACES-NT',
 ]
+
+export const whatIsBlockTexts = {
+  title: 'Что такое CHED-P и CHED-A?',
+  highlight: ['CHED-P', 'CHED-A'],
+  text: `CHED-P — декларации для живых животных, включая сельскохозяйственных, домашних и декоративных.
+
+CHED-A — декларации для продуктов животного происхождения: мясо, молочные изделия, яйца, корма, субпродукты и др.`,
+}

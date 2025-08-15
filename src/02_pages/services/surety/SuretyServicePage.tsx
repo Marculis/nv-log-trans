@@ -1,11 +1,11 @@
 import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon } from '@/shared/ui'
+import { DoneIcon, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { benefits, importantPoints, servicePoints } from './lib/constants'
-import ServiceImportance from '@/widgets/ServiceImportance'
+import { Heading, List, ListItem } from '@chakra-ui/react'
+import { benefits, importantPoints, servicePoints, whatIsBlockTexts } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const SuretyServicePage = () => {
   return (
@@ -17,20 +17,7 @@ const SuretyServicePage = () => {
         imageSrc={`${baseUrl}/images/handshake.jpg`}
       />
 
-      <BlockContainer>
-        <Heading>Что такое Таможенное поручительство?</Heading>
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={['Таможенное поручительство']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base', whiteSpace: 'pre-wrap' }}
-          >
-            {`Таможенное поручительство — это один из способов обеспечения исполнения обязанности по уплате таможенных пошлин, налогов и иных обязательств, предусмотренных таможенным законодательством. Оно предоставляется третьим лицом (поручителем) в пользу таможенного органа и применяется при перемещении товаров через границу или в рамках процедуры таможенного транзита.`}
-          </Highlight>
-        </Text>
-      </BlockContainer>
+      <WhatIsBlock {...whatIsBlockTexts} />
 
       <ServiceConditionsBlock
         heading='Особенности поручительства'

@@ -7,7 +7,6 @@ export interface IMetaContainerProps {
   title: string
   description: string
   keywords?: string
-  withVideo?: boolean
   image?: string
 }
 
@@ -15,8 +14,7 @@ const MetaContainer: FC<IMetaContainerProps> = ({
   title,
   description,
   keywords,
-  image = '/meta/sk-line-meta.png',
-  withVideo = false,
+  image = '/images/main-bg2.jpg',
 }) => {
   const { asPath } = useRouter()
 
@@ -51,12 +49,6 @@ const MetaContainer: FC<IMetaContainerProps> = ({
         content={`${baseUrl}${asPath}`}
         property='og:url'
       />
-      {withVideo && (
-        <meta
-          content='https://youtu.be/YKVltIVLqGA'
-          property='og:video'
-        />
-      )}
 
       {/*  twitter */}
       <meta

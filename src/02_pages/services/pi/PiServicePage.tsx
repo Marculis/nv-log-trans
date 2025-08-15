@@ -1,11 +1,11 @@
-import { BlockContainer } from '@/shared/ui'
+import { WhatIsBlock } from '@/shared/ui'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
-import ServiceImportance from '@/widgets/ServiceImportance'
-import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { benefits, importantPoints, servicePoints } from './lib/constants'
+import { Heading, List, ListItem } from '@chakra-ui/react'
+import { benefits, importantPoints, servicePoints, whatIsBlockTexts } from './lib/constants'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { baseUrl } from '@/shared/lib'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const PiServicePage = () => {
   return (
@@ -17,23 +17,7 @@ const PiServicePage = () => {
         imageSrc={`${baseUrl}/images/pi-bg.jpg`}
       />
 
-      <BlockContainer>
-        <Heading>Что такое ПИ?</Heading>
-
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={['Предварительное информирование', 'таможенная гарантия']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base' }}
-          >
-            {`Предварительное информирование — это процедура предоставления сведений о товаре, транспортном средстве и маршруте до прибытия груза на таможенную территорию России. Она обязательна при перемещении товаров через границу, особенно при транзите, и позволяет ускорить прохождение таможенных формальностей.
-
-В рамках ПИ может потребоваться таможенная гарантия — обязательство уплаты таможенных платежей в случае нарушения условий транзита. Она оформляется через аккредитованных гарантов и обеспечивает финансовую защиту государства.`}
-          </Highlight>
-        </Text>
-      </BlockContainer>
+      <WhatIsBlock {...whatIsBlockTexts} />
 
       <ServiceConditionsBlock
         heading='Что входит в услугу?'

@@ -1,4 +1,4 @@
-import { baseUrl, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
+import { baseUrl, COMPANY, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
 import { BlockContainer, PhoneIcon, SocialMediaLinks } from '@/shared/ui'
 import { HamburgerIcon, PhoneIcon as PhoneIconChakra } from '@chakra-ui/icons'
 import { Link } from '@chakra-ui/next-js'
@@ -36,13 +36,13 @@ const HeaderMobile = () => {
       zIndex='sticky'
     >
       <Link
-        h='35px'
+        h='45px'
         href={isMain ? '' : '/'}
         position='relative'
-        w='35px'
+        w='45px'
       >
         <Image
-          alt={'SK-line import logo'}
+          alt={`${COMPANY} logo`}
           loading='eager'
           objectFit='contain'
           priority={true}

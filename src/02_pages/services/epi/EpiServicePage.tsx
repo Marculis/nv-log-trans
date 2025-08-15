@@ -1,11 +1,11 @@
-import { BlockContainer } from '@/shared/ui'
-import ServiceImportance from '@/widgets/ServiceImportance'
-import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { benefits, importantPoints, servicePoints } from './lib/constants'
+import { WhatIsBlock } from '@/shared/ui'
+import { Heading, List, ListItem } from '@chakra-ui/react'
+import { benefits, importantPoints, servicePoints, whatIsBlockTexts } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { baseUrl } from '@/shared/lib'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const EpiServicePage = () => {
   return (
@@ -18,24 +18,7 @@ const EpiServicePage = () => {
         imageSrc={`${baseUrl}/images/epi-bg.jpg`}
       />
 
-      <BlockContainer>
-        <Heading>Что такое ЭПИ?</Heading>
-
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={['Электронное предварительное информирование']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base', whiteSpace: 'pre-wrap' }}
-          >
-            {`Электронное предварительное информирование — это обязательная процедура уведомления таможенных органов о прибытии товаров на территорию Республики Беларусь до фактического пересечения границы. 
-ЭПИ позволяет ускорить прохождение таможенного контроля, снизить риски задержек и обеспечить прозрачность логистических операций.
-
-С 1 июля 2021 года ЭПИ стало обязательным для всех транспортных средств, следующих в Беларусь с товарами, подлежащими таможенному декларированию.`}
-          </Highlight>
-        </Text>
-      </BlockContainer>
+      <WhatIsBlock {...whatIsBlockTexts} />
 
       <ServiceConditionsBlock
         heading='Наша компания предлагает полный спектр услуг по оформлению ЭПИ'

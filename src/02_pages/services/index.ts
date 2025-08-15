@@ -9,3 +9,4 @@ export { default as CustomDeclarationsPage } from './customDeclarations/CustomDe
 export { default as StatisticDeclarationPage } from './statisticDeclaration/StatisticDeclarationPage'
 export { default as ServicesPage } from './services/ServicesPage'
 export { default as ImportExportReexportPage } from './importExportReexport/ImportExportReexportPage'
+export { default as ImportTemporaryPage } from './importTemporary/ImportTemporaryPage'

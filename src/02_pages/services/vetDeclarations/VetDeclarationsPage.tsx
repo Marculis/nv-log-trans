@@ -1,11 +1,11 @@
 import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon } from '@/shared/ui'
+import { DoneIcon, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { importantPoints, requiredDocuments, servicesConditions } from './lib/constants'
-import ServiceImportance from '@/widgets/ServiceImportance'
+import { Heading, List, ListItem } from '@chakra-ui/react'
+import { requiredDocuments, servicesConditions, whatIsBlockTexts } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const VetDeclarationsPage = () => {
   return (
@@ -17,23 +17,7 @@ const VetDeclarationsPage = () => {
         imageSrc={`${baseUrl}/images/animals.jpg`}
       />
 
-      <BlockContainer>
-        <Heading>Что такое CHED-P и CHED-A?</Heading>
-
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={['CHED-P', 'CHED-A']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base', whiteSpace: 'pre-wrap' }}
-          >
-            {`CHED-P — декларации для живых животных, включая сельскохозяйственных, домашних и декоративных.
-
-CHED-A — декларации для продуктов животного происхождения: мясо, молочные изделия, яйца, корма, субпродукты и др.`}
-          </Highlight>
-        </Text>
-      </BlockContainer>
+      <WhatIsBlock {...whatIsBlockTexts} />
 
       <ServiceConditionsBlock
         heading='Необходимые документы для оформления'
@@ -41,11 +25,7 @@ CHED-A — декларации для продуктов животного п�
         servicePoints={requiredDocuments}
       />
 
-      <ServiceImportance
-        heading='Почему с нами удобно работать?'
-        importantPoints={importantPoints}
-        itemTextWidth='340px'
-      />
+      <ServiceImportance itemTextWidth='340px' />
 
       <ContactsBlock>
         <Heading

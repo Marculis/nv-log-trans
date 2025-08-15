@@ -1,11 +1,11 @@
 import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon } from '@/shared/ui'
+import { DoneIcon, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { benefits, importantPoints, requiredDocuments } from './lib/constants'
-import ServiceImportance from '@/widgets/ServiceImportance'
+import { Heading, List, ListItem } from '@chakra-ui/react'
+import { benefits, importantPoints, requiredDocuments, whatIsBlockTexts } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const CustomDeclarationsPage = () => {
   return (
@@ -17,24 +17,7 @@ const CustomDeclarationsPage = () => {
         imageSrc={`${baseUrl}/images/main-bg.jpg`}
       />
 
-      <BlockContainer>
-        <Heading>Что такое Таможенное декларирование?</Heading>
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={['Таможенное декларирование']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base', whiteSpace: 'pre-wrap' }}
-          >
-            {`Таможенное декларирование — это представление таможенному органу сведений о товарах, перемещаемых через границу, с целью помещения их под соответствующий таможенный режим. Оно осуществляется путем подачи письменной или электронной таможенной декларации.
-            
-Подача таможенной декларации необходима всем, кто перемещает товары через границу — от импортёров и экспортёров до логистических компаний и физических лиц. Услуга особенно актуальна для бизнеса, занимающегося международной торговлей, а также для тех, кто оформляет транзитные перевозки или заказывает товары из-за рубежа.
-
-Корректное декларирование — ключ к законному и своевременному выпуску груза. Ошибки в оформлении могут привести к задержкам, штрафам и дополнительным расходам. Мы обеспечиваем точность, соответствие требованиям и прозрачность на каждом этапе.`}
-          </Highlight>
-        </Text>
-      </BlockContainer>
+      <WhatIsBlock {...whatIsBlockTexts} />
 
       <ServiceConditionsBlock
         heading='Документы, необходимые для оформления'

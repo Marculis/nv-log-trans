@@ -1,10 +1,10 @@
 import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon } from '@/shared/ui'
+import { BlockContainer, DoneIcon, WhatIsBlock } from '@/shared/ui'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Flex, Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { documentsRequired, importantPoints } from './lib/constants'
-import ServiceImportance from '@/widgets/ServiceImportance'
+import { Flex, Heading, List, ListItem } from '@chakra-ui/react'
+import { documentsRequired, whatIsBlockTexts } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const ImportExportReexportPage = () => {
   return (
@@ -15,26 +15,9 @@ const ImportExportReexportPage = () => {
         headingHighlight={['импорт, экспорт и реэкспорт']}
         imageSrc={`${baseUrl}/images/import-export.jpg`}
       />
-      <BlockContainer>
-        <Heading> Что такое импорт, экспорт и реэкспорт?</Heading>
 
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={['Импорт', 'Экспорт', 'Реэкспорт']}
-            styles={{ fontWeight: 'semibold', color: 'primary.base', whiteSpace: 'pre-wrap' }}
-          >
-            {`Импорт - ввоз товаров на таможенную территорию Республики Беларусь с целью их использования, продажи или переработки.
+      <WhatIsBlock {...whatIsBlockTexts} />
 
-Экспорт - вывоз товаров с территории РБ за границу, чаще всего для продажи или передачи.
-
-Реэкспорт - вывоз товаров, ранее ввезённых в РБ, обратно за пределы ЕАЭС, без их использования или переработки на территории страны. Это может быть возврат некачественного товара, изменение условий сделки или перепродажа.
-`}
-          </Highlight>
-        </Text>
-      </BlockContainer>
       <BlockContainer>
         <Heading textAlign='center'>Какие документы нужны для оформления?</Heading>
         <Flex
@@ -74,10 +57,7 @@ const ImportExportReexportPage = () => {
         </Flex>
       </BlockContainer>
 
-      <ServiceImportance
-        heading='Почему с нами удобно работать?'
-        importantPoints={importantPoints}
-      />
+      <ServiceImportance />
 
       <ContactsBlock></ContactsBlock>
     </>

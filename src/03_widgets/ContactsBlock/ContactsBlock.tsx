@@ -1,7 +1,7 @@
 import { EMAIL, PHONE_NUMBER, PHONE_NUMBER_SECOND } from '@/shared/lib'
 import { BlockContainer, EmailIcon, PhoneIcon, SocialMediaLinks } from '@/shared/ui'
 import { Link } from '@chakra-ui/next-js'
-import { Flex, Heading, HStack, Text } from '@chakra-ui/react'
+import { Flex, Heading, Highlight, HStack, Text } from '@chakra-ui/react'
 import ContactUsForm from './ContactUsForm'
 import { FC, ReactNode } from 'react'
 
@@ -11,6 +11,7 @@ const contactLinkStyles = {
   display: 'flex',
   alignItems: 'center',
   gap: 2,
+  lineHeight: 'normal',
 }
 
 const ContactsBlock: FC<{ children?: ReactNode; childrenUp?: boolean }> = ({
@@ -37,7 +38,12 @@ const ContactsBlock: FC<{ children?: ReactNode; childrenUp?: boolean }> = ({
           fontWeight='semibold'
           size='lg'
         >
-          Связь с нами
+          <Highlight
+            query={['Работаем круглосуточно']}
+            styles={{ fontSize: 'xl', pb: '2', color: 'secondary.base' }}
+          >
+            Связь с нами. Работаем круглосуточно
+          </Highlight>
         </Heading>
         <Flex
           flexDir='column'

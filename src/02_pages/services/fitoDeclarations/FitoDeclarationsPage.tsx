@@ -1,11 +1,16 @@
 import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon } from '@/shared/ui'
+import { DoneIcon, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { importantPoints, requiredDocuments, servicesConditions } from './lib/constants'
-import ServiceImportance from '@/widgets/ServiceImportance'
+import { Heading, List, ListItem } from '@chakra-ui/react'
+import {
+  importantPoints,
+  requiredDocuments,
+  servicesConditions,
+  whatIsBlockTexts,
+} from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
+import ServiceImportance from '@/widgets/ServiceImportance'
 
 const FitoDeclarationsPage = () => {
   return (
@@ -17,26 +22,7 @@ const FitoDeclarationsPage = () => {
         imageSrc={`${baseUrl}/images/fito.jpg`}
       />
 
-      <BlockContainer>
-        <Heading>Что такое CHED-PP и CHED-D?</Heading>
-
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={[
-              'CHED-PP (Common Health Entry Document – Plant Products)',
-              'CHED-D (Common Health Entry Document – Derogation)',
-            ]}
-            styles={{ fontWeight: 'semibold', color: 'primary.base', whiteSpace: 'pre-wrap' }}
-          >
-            {`CHED-PP (Common Health Entry Document – Plant Products) — это фитосанитарная въездная декларация, обязательная для ввоза в ЕС растений, продуктов растительного происхождения и других объектов, подлежащих фитосанитарному контролю.
-            
-CHED-D (Common Health Entry Document – Derogation) — используется для ввоза определённых категорий товаров, подпадающих под особые условия или исключения, включая отходы, корма, и другие специфические грузы, требующие контроля.`}
-          </Highlight>
-        </Text>
-      </BlockContainer>
+      <WhatIsBlock {...whatIsBlockTexts} />
 
       <ServiceConditionsBlock
         heading='Необходимые документы для оформления'

@@ -89,6 +89,14 @@ const services = [
     image: `${baseUrl}/images/import-export.jpg`,
   },
   {
+    url: '/services/import_temporary',
+    name: 'Временный ввоз',
+    description: 'Временный ввоз',
+    highlight: ['Временный ввоз'],
+    Icon: HandshakeIcon,
+    image: `${baseUrl}/images/skyline.jpg`,
+  },
+  {
     url: '/services/surety',
     name: 'Поручительство',
     description:

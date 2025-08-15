@@ -85,6 +85,7 @@ const Header = () => {
         alignItems='center'
         as='header'
         bgColor='bg.light'
+        boxShadow='lg'
         flexDir='row'
         gap='2'
         h={'4rem'}

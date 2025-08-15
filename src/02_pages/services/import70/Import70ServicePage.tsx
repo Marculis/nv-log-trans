@@ -1,9 +1,9 @@
 import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon } from '@/shared/ui'
+import { DoneIcon, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Heading, Highlight, List, ListItem, Text } from '@chakra-ui/react'
-import { benefits, importantPoints, servicePoints } from './lib/constants'
+import { Heading, List, ListItem } from '@chakra-ui/react'
+import { benefits, servicePoints, whatIsBlockTexts } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceImportance from '@/widgets/ServiceImportance'
 
@@ -16,31 +16,8 @@ const Import70ServicePage = () => {
         headingHighlight={['(Таможенный склад)']}
         imageSrc={`${baseUrl}/images/import-70-bg.jpg`}
       />
-      <BlockContainer>
-        <Heading>Что такое процедура «Импорт 70»?</Heading>
 
-        <Text
-          fontSize='xl'
-          whiteSpace='pre-wrap'
-        >
-          <Highlight
-            query={[
-              '«Импорт 70»',
-              'ИМ 70',
-              'временно размещать иностранные товары на таможенном складе',
-            ]}
-            styles={{ fontWeight: 'semibold', whiteSpace: 'pre-wrap', color: 'primary.base' }}
-          >
-            {`Процедура «Импорт 70» — это таможенный режим, позволяющий временно размещать иностранные товары на таможенном складе без уплаты пошлин, налогов и применения мер нетарифного регулирования. Это решение идеально подходит для компаний, которым нужно отложить финансовые обязательства или провести дополнительные операции с грузом до его окончательного оформления.
-
-Таможенная процедура «Импорт 70» применяется, когда необходимо временно разместить импортируемый товар на закрытом складе для выполнения логистических операций. Ключевым этапом оформления является подача декларации, содержащей сведения о грузе и условиях его ввоза.
-
-В декларации указывается специальный код процедуры - ИМ 70, который определяет режим хранения и обращения с товаром. Этот код означает, что груз будет находиться на территории таможенного склада, где допускается проведение определённых операций, но запрещено вывозить его за пределы склада до завершения процедуры.
-
-            `}
-          </Highlight>
-        </Text>
-      </BlockContainer>
+      <WhatIsBlock {...whatIsBlockTexts} />
 
       <ServiceConditionsBlock
         heading='Преимущества услуги «Импорт 70»'
@@ -48,10 +25,7 @@ const Import70ServicePage = () => {
         servicePoints={servicePoints}
       />
 
-      <ServiceImportance
-        heading='Почему с нами удобно работать?'
-        importantPoints={importantPoints}
-      />
+      <ServiceImportance />
 
       <ContactsBlock>
         <Heading
