@@ -1,18 +1,18 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { FC } from 'react'
-import { baseUrl } from '../lib'
+import { baseUrl, COMPANY } from '../lib'
 
 export interface IMetaContainerProps {
-  title: string
-  description: string
+  title?: string
+  description?: string
   keywords?: string
   image?: string
 }
 
 const MetaContainer: FC<IMetaContainerProps> = ({
-  title,
-  description,
+  title = 'Услуги таможенного оформления',
+  description = `Широкий спектр оформления таможенных услуг в РБ, РФ, ЕС. ${COMPANY}`,
   keywords,
   image = '/images/main-bg2.jpg',
 }) => {

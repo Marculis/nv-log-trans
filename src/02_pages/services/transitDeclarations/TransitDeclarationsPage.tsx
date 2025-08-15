@@ -1,5 +1,5 @@
-import { baseUrl } from '@/shared/lib'
-import { DoneIcon, WhatIsBlock } from '@/shared/ui'
+import { baseUrl, COMPANY } from '@/shared/lib'
+import { DoneIcon, MetaContainer, WhatIsBlock } from '@/shared/ui'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Box, Flex, Heading, List, ListItem } from '@chakra-ui/react'
 import {
@@ -15,6 +15,8 @@ import ServiceImportance from '@/widgets/ServiceImportance'
 const TransitDeclarationsPage = () => {
   return (
     <>
+      <MetaContainer title={`Транзитные декларации Т1 Т2 - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Мы оформляем транзитные декларации Т1 и Т2, необходимые для законного перемещения товаров под таможенным контролем'
         heading={`Оформление транзитных деклараций формы Т1, Т2`}

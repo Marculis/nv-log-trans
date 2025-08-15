@@ -1,11 +1,12 @@
 import { FC } from 'react'
-import { BlockContainer } from '@/shared/ui'
-import { Box, Card, Flex, Heading, Highlight } from '@chakra-ui/react'
-import { baseUrl, services } from '@/shared/lib'
+import { MetaContainer } from '@/shared/ui'
+import { Box, Heading } from '@chakra-ui/react'
+import { baseUrl } from '@/shared/lib'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { Link } from '@chakra-ui/next-js'
 import AllServicesBlock from '@/widgets/AllServicesBlock'
+import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
+import { servicePoints } from './lib/constants'
 
 interface IMainPageProps {
   images: { src: string; alt: string }[]
@@ -17,17 +18,23 @@ const MAIN_HEADING_TEXT = `Таможенное оформление, логис
 const MainPage: FC<IMainPageProps> = () => {
   return (
     <>
+      <MetaContainer />
       <ServiceMainBlock
         description='Оказываем услуги по оформлению транспортных и таможенных документов для международных перевозок в странах ЕАЭС и ЕС'
         heading={MAIN_HEADING_TEXT}
         headingHighlight={['РБ, РФ, Европа']}
       />
 
+      <ServiceConditionsBlock
+        heading='Что мы предлагаем:'
+        imageSrc={`${baseUrl}/images/documents-4.jpg`}
+        servicePoints={servicePoints}
+      />
+
       <AllServicesBlock>
         <Heading
           color='gray.600'
           mb='8'
-          mt='20'
           size='2xl'
           textAlign='center'
         >

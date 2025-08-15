@@ -1,5 +1,5 @@
-import { baseUrl } from '@/shared/lib'
-import { DoneIcon, WhatIsBlock } from '@/shared/ui'
+import { baseUrl, COMPANY } from '@/shared/lib'
+import { DoneIcon, MetaContainer, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Heading, List, ListItem } from '@chakra-ui/react'
@@ -10,6 +10,8 @@ import ServiceImportance from '@/widgets/ServiceImportance'
 const Import70ServicePage = () => {
   return (
     <>
+      <MetaContainer title={`Импорт 70(Таможенный склад) - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Мы предоставляем оформление услуги Таможенный склад в соответствии с требованиями таможенной службы'
         heading={`Оформление процедуры\n«Импорт 70» (Таможенный склад)`}

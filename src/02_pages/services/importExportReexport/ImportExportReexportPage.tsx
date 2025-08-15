@@ -1,5 +1,5 @@
-import { baseUrl } from '@/shared/lib'
-import { BlockContainer, DoneIcon, WhatIsBlock } from '@/shared/ui'
+import { baseUrl, COMPANY } from '@/shared/lib'
+import { BlockContainer, DoneIcon, MetaContainer, WhatIsBlock } from '@/shared/ui'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Flex, Heading, List, ListItem } from '@chakra-ui/react'
 import { documentsRequired, whatIsBlockTexts } from './lib/constants'
@@ -9,6 +9,8 @@ import ServiceImportance from '@/widgets/ServiceImportance'
 const ImportExportReexportPage = () => {
   return (
     <>
+      <MetaContainer title={`Импорт. Экспорт. Реэкспорт - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Оформляем импорт, экспорт и реэкспорт товаров в Республике Беларусь - быстро, точно и с соблюдением всех требований'
         heading={`Импорт. Экспорт. Реэкспорт.`}

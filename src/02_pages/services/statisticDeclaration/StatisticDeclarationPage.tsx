@@ -1,5 +1,5 @@
-import { baseUrl } from '@/shared/lib'
-import { WhatIsBlock } from '@/shared/ui'
+import { baseUrl, COMPANY } from '@/shared/lib'
+import { MetaContainer, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { servicePoints, whatIsBlockTexts } from './lib/constants'
@@ -9,6 +9,8 @@ import ServiceImportance from '@/widgets/ServiceImportance'
 const StatisticDeclarationPage = () => {
   return (
     <>
+      <MetaContainer title={`Статистическое декларирование - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Мы подготавливаем и подаём документы через TRACES-NT, сопровождаем процесс до завершения контроля и обеспечиваем соответствие всем требованиям.'
         heading={`Статистическое декларирование`}

@@ -9,7 +9,7 @@ export default function Document() {
           rel='icon'
         />
         <link
-          href='/favicon.ico'
+          href='/icons/logo-16.svg'
           key='favicon'
           rel='icon'
           sizes='any'

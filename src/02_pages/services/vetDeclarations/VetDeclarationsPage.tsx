@@ -1,5 +1,5 @@
-import { baseUrl } from '@/shared/lib'
-import { DoneIcon, WhatIsBlock } from '@/shared/ui'
+import { baseUrl, COMPANY } from '@/shared/lib'
+import { DoneIcon, MetaContainer, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Heading, List, ListItem } from '@chakra-ui/react'
@@ -10,6 +10,8 @@ import ServiceImportance from '@/widgets/ServiceImportance'
 const VetDeclarationsPage = () => {
   return (
     <>
+      <MetaContainer title={`Ветеринарные декларации - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Мы подаём документы через систему TRACES-NT, обеспечиваем соответствие ветеринарным требованиям и сопровождаем процесс до завершения контроля'
         heading={`Оформление ветеринарных деклараций CHED-Р, CHED-А`}

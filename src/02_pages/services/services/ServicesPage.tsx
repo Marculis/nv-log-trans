@@ -1,15 +1,53 @@
-import { BlockContainer } from '@/shared/ui'
+import { COMPANY } from '@/shared/lib'
+import { BlockContainer, MetaContainer } from '@/shared/ui'
 import AllServicesBlock from '@/widgets/AllServicesBlock'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
-import { Box, Heading } from '@chakra-ui/react'
+import ServiceImportance from '@/widgets/ServiceImportance'
+import { Box, Flex, Heading, Text } from '@chakra-ui/react'
 
 const ServicesPage = () => {
   return (
     <>
-      <BlockContainer>
-        <Heading>Все услуги </Heading>
-      </BlockContainer>
-      <AllServicesBlock />
+      <MetaContainer title={`Услуги таможни и логистики - ${COMPANY}`} />
+
+      {/* <BlockContainer bg='gray.700'>
+        <Flex
+          borderRadius='xl'
+          color='gray.100'
+          flexDir='column'
+          gap='8'
+          p='24'
+        >
+          <Heading
+            fontWeight='semibold'
+            size='3xl'
+            textAlign='center'
+            whiteSpace='pre-wrap'
+          >
+            {COMPANY}
+          </Heading>
+          <Text
+            color='currentColor'
+            fontSize='2.5rem'
+            lineHeight='normal'
+          >
+            Надежное оформление логистических документов и таможенных деклараций РБ, РФ, ЕС
+          </Text>
+        </Flex>
+      </BlockContainer> */}
+
+      <AllServicesBlock>
+        <Heading
+          color='gray.600'
+          size='2xl'
+          textAlign='center'
+        >
+          Список оказываемых услуг:
+        </Heading>
+      </AllServicesBlock>
+
+      <ServiceImportance itemTextWidth='360px' />
+
       <ContactsBlock childrenUp={false}>
         <Box
           borderRadius='xl'

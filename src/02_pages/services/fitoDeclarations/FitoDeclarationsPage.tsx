@@ -1,5 +1,5 @@
-import { baseUrl } from '@/shared/lib'
-import { DoneIcon, WhatIsBlock } from '@/shared/ui'
+import { baseUrl, COMPANY } from '@/shared/lib'
+import { DoneIcon, MetaContainer, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Heading, List, ListItem } from '@chakra-ui/react'
@@ -15,6 +15,8 @@ import ServiceImportance from '@/widgets/ServiceImportance'
 const FitoDeclarationsPage = () => {
   return (
     <>
+      <MetaContainer title={`Фитосанитарные декларации - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Мы подготавливаем и подаём документы через TRACES-NT, сопровождаем процесс до завершения контроля и обеспечиваем соответствие всем требованиям.'
         heading={`Оформление фитосанитарных деклараций CHED-PP, CHED-D`}

@@ -1,5 +1,5 @@
-import { baseUrl } from '@/shared/lib'
-import { DoneIcon, WhatIsBlock } from '@/shared/ui'
+import { baseUrl, COMPANY } from '@/shared/lib'
+import { DoneIcon, MetaContainer, WhatIsBlock } from '@/shared/ui'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
 import { Heading, List, ListItem } from '@chakra-ui/react'
@@ -10,6 +10,8 @@ import ServiceImportance from '@/widgets/ServiceImportance'
 const CustomDeclarationsPage = () => {
   return (
     <>
+      <MetaContainer title={`Таможенное декларирование ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Мы обеспечиваем точность, соответствие требованиям и оперативную подачу документов для законного перемещения грузов через границу'
         heading={`Таможенное декларирование`}

@@ -1,15 +1,17 @@
-import { WhatIsBlock } from '@/shared/ui'
+import { MetaContainer, WhatIsBlock } from '@/shared/ui'
 import { Heading, List, ListItem } from '@chakra-ui/react'
 import { benefits, importantPoints, servicePoints, whatIsBlockTexts } from './lib/constants'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { baseUrl } from '@/shared/lib'
+import { baseUrl, COMPANY } from '@/shared/lib'
 import ServiceImportance from '@/widgets/ServiceImportance'
 
 const EpiServicePage = () => {
   return (
     <>
+      <MetaContainer title={`Электронное предварительное информирование - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Профессиональные услуги по оформлению ЭПИ для перевозчиков, логистических операторов,
           импортеров и экспортеров, работающих на территории Беларуси, России и Европы'

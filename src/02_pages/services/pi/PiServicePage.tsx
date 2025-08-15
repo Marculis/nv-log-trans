@@ -1,15 +1,17 @@
-import { WhatIsBlock } from '@/shared/ui'
+import { MetaContainer, WhatIsBlock } from '@/shared/ui'
 import { ContactsBlock } from '@/widgets/ContactsBlock'
 import { Heading, List, ListItem } from '@chakra-ui/react'
 import { benefits, importantPoints, servicePoints, whatIsBlockTexts } from './lib/constants'
 import ServiceConditionsBlock from '@/widgets/ServiceConditionsBlock'
 import ServiceMainBlock from '@/widgets/ServiceMainBlock'
-import { baseUrl } from '@/shared/lib'
+import { baseUrl, COMPANY } from '@/shared/lib'
 import ServiceImportance from '@/widgets/ServiceImportance'
 
 const PiServicePage = () => {
   return (
     <>
+      <MetaContainer title={`Предварительное информирование - ${COMPANY}`} />
+
       <ServiceMainBlock
         description='Мы предоставляем услуги ПИ в соответствии с требованиями Федеральной таможенной службы РФ, включая оформление таможенной гарантии'
         heading={`Предварительное информирование (ПИ)`}
