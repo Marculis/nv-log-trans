@@ -1,3 +1,4 @@
+import { baseUrl } from '@/shared/lib'
 import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
@@ -9,7 +10,7 @@ export default function Document() {
           rel='icon'
         />
         <link
-          href='/icons/logo-16.svg'
+          href={`${baseUrl}/icons/logo-16.svg`}
           key='favicon'
           rel='icon'
           sizes='any'

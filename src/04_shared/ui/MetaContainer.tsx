@@ -14,7 +14,7 @@ const MetaContainer: FC<IMetaContainerProps> = ({
   title = 'Услуги таможенного оформления',
   description = `Широкий спектр оформления таможенных услуг в РБ, РФ, ЕС. ${COMPANY}`,
   keywords,
-  image = '/images/main-bg2.jpg',
+  image = `${baseUrl}/images/main-bg2.jpg`,
 }) => {
   const { asPath } = useRouter()
 
